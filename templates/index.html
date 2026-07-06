@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Credit Card Approval Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Credit Card Approval Prediction</h1>
+
+        <form action="/predict" method="POST">
+
+            <input type="number" name="ID" placeholder="Customer ID" required>
+
+            <input type="number" name="CODE_GENDER" placeholder="Gender (0=Female, 1=Male)" required>
+
+            <input type="number" name="FLAG_OWN_CAR" placeholder="Own Car (0=No,1=Yes)" required>
+
+            <input type="number" name="FLAG_OWN_REALTY" placeholder="Own House (0=No,1=Yes)" required>
+
+            <input type="number" name="CNT_CHILDREN" placeholder="Children Count" required>
+
+            <input type="number" name="AMT_INCOME_TOTAL" placeholder="Annual Income" required>
+
+            <input type="number" name="NAME_INCOME_TYPE" placeholder="Income Type (0-4)" required>
+
+            <input type="number" name="NAME_EDUCATION_TYPE" placeholder="Education Type (0-4)" required>
+
+            <input type="number" name="NAME_FAMILY_STATUS" placeholder="Family Status (0-4)" required>
+
+            <input type="number" name="NAME_HOUSING_TYPE" placeholder="Housing Type (0-5)" required>
+
+            <input type="number" name="DAYS_BIRTH" placeholder="Days Birth" required>
+
+            <input type="number" name="DAYS_EMPLOYED" placeholder="Days Employed" required>
+
+            <input type="number" name="FLAG_MOBIL" placeholder="Mobile (1)" required>
+
+            <input type="number" name="FLAG_WORK_PHONE" placeholder="Work Phone (0/1)" required>
+
+            <input type="number" name="FLAG_PHONE" placeholder="Phone (0/1)" required>
+
+            <input type="number" name="FLAG_EMAIL" placeholder="Email (0/1)" required>
+
+            <input type="number" name="OCCUPATION_TYPE" placeholder="Occupation Type (0-18)" required>
+
+            <input type="number" step="0.1" name="CNT_FAM_MEMBERS" placeholder="Family Members" required>
+
+            <br><br>
+
+            <button type="submit">Predict</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
